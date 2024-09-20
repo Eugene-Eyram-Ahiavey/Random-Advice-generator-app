@@ -1,0 +1,112 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Manrope", sans-serif;
+}
+
+:root{
+--lcyan:hsl(193, 38%, 86%);
+--neonGreen:hsl(150, 100%, 66%);
+--grayishBlue:hsl(217, 19%, 38%);
+--dgblue:hsl(217, 19%, 24%);
+--darkBlue:hsl(218, 23%, 16%);
+--fs:28px;
+}
+
+
+
+main{
+display: grid;
+place-items:center;
+min-height: 100vh;
+background-color:var(--darkBlue);
+padding-bottom:2rem;
+}
+main .container{
+background-color:var(--grayishBlue);
+width:500px;
+max-width:500px;
+height: auto;
+margin-top: 5rem;
+border-radius:20px;
+}
+
+.container .inner{
+padding:1.5rem ;
+}
+.container .inner .count{
+text-align:center;
+color: var(--neonGreen);
+}
+
+.container .inner .content{
+text-align: center;
+font-size:var(--fs);
+color:var(--lcyan);
+padding-top:.5rem;
+}
+.container .inner .divider{
+margin-top: 1rem;
+padding:1rem 0;
+}
+.container .inner .divider img{
+filter: hue-rotate(193deg) saturate(1.0) brightness(1.5);
+}
+main .dice{
+width:45px;
+height:45px;
+border-radius:50%;
+text-align:center;
+background-color:var(--neonGreen);
+position: relative;
+top:-90%;
+transition:box-shadow 0.3s ease;
+}
+main .dice:hover{
+ box-shadow:0 0 10px hsl(150, 100%, 66%), 0 0 10px hsl(150, 100%, 66%);
+}
+main .dice img{
+padding-top:.5rem;
+}
+main .dice img:hover{
+cursor:pointer;
+}
+
+@media screen and (max-width:850px){
+ main .dice{
+top:-95%;
+ }
+}
+
+@media screen and (max-width:780px){
+main .dice{
+top:-90%;
+}
+}
+@media screen and (max-width:500px){
+main .container{
+width:400px;
+}
+.container .inner .divider{
+width:50%;
+margin:auto;
+font-size:bold;
+}
+.container .inner .divider img{
+width:100%;
+}
+}
+
+@media screen and (max-width:450px){
+main .container{
+width:350px ;
+}   
+}
+@media screen and (max-width:360px){
+main .container{
+width:330px;
+}
+}
+
+
